@@ -469,11 +469,16 @@ footer p {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid #1e293b;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-bottom p {
   margin: 0;
   color: #64748b;
+  text-align: center;
 }
 
 /* RESPONSIVE */
