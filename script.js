@@ -30,24 +30,7 @@ window.addEventListener("load", () => {
     window.scrollTo(0, 0);
 });
 
-const buttons = document.querySelectorAll(".show-more-btn");
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        const card = button.closest(".card");
-        const hiddenCard = card.querySelector(".hidden_card");
-
-        hiddenCard.classList.toggle("show");
-
-        if (hiddenCard.clasList.contains("show")) {
-            button.textContent = "show Less";
-        }
-        else {
-            button.textContent = "show More";
-        }
-    });
-
-});
 
 
 
