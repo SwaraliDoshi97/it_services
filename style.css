@@ -317,10 +317,11 @@ section {
 
 /* CARDS */
 
-.cards {
+.service-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  /* align-items: start; */
 }
 
 .card {
@@ -346,6 +347,27 @@ section {
   color: #4b5563;
   line-height: 1.8;
 }
+
+.hidden_card {
+  display: none;
+}
+
+.show-more-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.show-more-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 
 /* PROJECTS */
 
