@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f4f7fb;
+  background: #f9f7f7;
   color: #111827;
   overflow-x: hidden;
 }
@@ -271,7 +271,7 @@ section {
 
 .section-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
@@ -283,6 +283,8 @@ section {
   line-height: 1.8;
   margin-bottom: 55px;
 }
+
+
 
 /* SECTION BACKGROUNDS */
 /* #home{
@@ -323,21 +325,44 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
+  max-width: 1300px;
 }
 
 .card-content {
   background: white;
-  padding: 40px 30px;
+  padding: 40px 32px;
   border-radius: 24px;
-  /* transition: 0.4s; */
+  transition: 0.4s;
   border: 1px solid #dbe4f0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #111827;
 }
 
 .card-content p {
-  color: #4b5563;
-  line-height: 1.8;
+  margin: 0;
 }
+
+.about-text {
+  color: #5b6472;
+  line-height: 1.9;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+}
+
+.about-text span {
+  display: block;
+  margin-top: 12px;
+  opacity: 0.9;
+}
+
 
 /* services cards */
 .cards {
