@@ -396,8 +396,9 @@ section {
 }
 
 .card h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 15px;
+  font-weight: 400;
 }
 
 .card p {
