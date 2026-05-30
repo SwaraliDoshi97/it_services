@@ -281,7 +281,7 @@ section {
   max-width: 100%;
   margin: auto;
   color: #474a4f;
-  /* line-height: 1.8; */
+  line-height: 1.8;
   margin-bottom: 55px;
 }
 
@@ -295,7 +295,8 @@ section {
   background: white;
   scroll-margin-top: 8rem;
   padding: 8rem 8%;
-
+  font-family: 'Inter', sans-serif;
+  /* max-width: 1300px; */
 }
 
 #services {
@@ -326,18 +327,72 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
-  max-width: 1300px;
 }
 
 .card-content {
+  position: relative;
   background: white;
   padding: 40px 32px;
-  border-radius: 24px;
-  transition: 0.4s;
-  border: 1px solid #dbe4f0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
 
+.card-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+
+  /* background:
+    linear-gradient(to bottom,
+      rgba(0, 123, 255, 1) 0%,
+      rgba(0, 123, 255, 0.6) 50%,
+      rgba(0, 123, 255, 0) 100%); */
+  background: linear-gradient(180deg,
+      rgba(59, 130, 246, 0.9) 0%,
+      rgba(59, 130, 246, 0.35) 45%,
+      rgba(59, 130, 246, 0.08) 75%,
+      rgba(59, 130, 246, 0) 100%);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+
+}
+
+.card-content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(59, 130, 246, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card-content:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.20),
+    0 8px 6px rgba(0, 0, 0, 0.4)
+}
+
+.card-content:hover::after {
+  opacity: 1;
+}
+
+.card-content::before {
+  transition: opacity 0.35s ease;
+}
+
+.card-content:hover::before {
+  opacity: 0.7;
+  transition: opacity 0.35s ease;
 }
 
 .card-content h3 {
@@ -405,24 +460,6 @@ section {
   color: #4b5563;
   line-height: 1.8;
 }
-
-
-
-/* .show-more-wrapper {
-  text-align: center;
-  margin-top: 40px;
-} */
-
-/* .show-more-btn {
-  padding: 14px 28px;
-  border: none;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #38bdf8, #2563eb);
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-} */
 
 .service-list {
   display: flex;
