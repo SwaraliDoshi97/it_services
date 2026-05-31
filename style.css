@@ -152,10 +152,10 @@ body {
 
 .box {
   background: linear-gradient(135deg, #38bdf8, #2563eb);
-  padding: 0 18px;
+  padding: 0 5px;
   border-radius: 10px;
   line-height: 1.5;
-  margin-right: 18px;
+  margin-right: 5px;
 
 }
 
@@ -372,6 +372,7 @@ section {
       rgba(0, 123, 255, 1) 0%,
       rgba(0, 123, 255, 0.6) 50%,
       rgba(0, 123, 255, 0) 100%); */
+
   background: linear-gradient(180deg,
       rgba(59, 130, 246, 0.9) 0%,
       rgba(59, 130, 246, 0.35) 45%,
@@ -662,20 +663,10 @@ footer p {
 @media(max-width:768px) {
 
   .navbar {
-    padding: 20px 5%;
+    padding: 12px 5%;
     flex-direction: column;
-    gap: 20px;
-  }
-
-  section {
-    padding: 90px 5%;
-
-  }
-
-  .hero {
-    padding: 120px 5%;
-    margin-top: 6rem;
-
+    gap: 12px;
+    text-align: center;
   }
 
   .nav-links {
@@ -685,55 +676,170 @@ footer p {
   }
 
   .hero {
-    text-align: center;
-  }
+    padding: 120px 5%;
+    margin-top: 6rem;
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
 
-  .hero-buttons {
-    justify-content: center;
   }
 
   .head {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     white-space: nowrap;
-    padding-bottom: 1px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    gap: 1px;
+    height: 2.5rem;
+  }
+
+  .underline {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    /* gap: 1px; */
+    height: 2.5rem;
+    font-size: 1.2rem
+  }
+
+  .mainline {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    white-space: nowrap;
+    height: 2.5rem;
 
   }
 
   .window {
-    /* height: 70px; */
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: block;
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    height: 5.5rem;
-    margin-left: 0.3rem;
-    animation-duration: 15s;
-    padding-top: 0.5rem;
-
-
+    height: 2.5rem;
+    margin-left: 0.02rem;
+    font-size: 1.2rem;
+    width: auto;
+    overflow: hidden;
   }
+
+  .active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    animation: slide 10s infinite ease-in-out;
+  }
+
 
   .active span {
-    height: 70px;
+    /* height: 70px; */
     justify-content: center;
-  }
-
-  .card,
-  .project-grid {
-
-    grid-template-columns: 1fr;
+    display: flex;
+    height: 2.23rem;
+    line-height: 1.7rem;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+
   }
 
-  section {
-    padding: 3.5rem 5%;
+  /* .section-subtitle {
+    font-size: 1rem;
+  } */
+
+  .hero-text {
+    font-size: 1.2rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 0 18px;
+    font-size: 0.85rem;
+    width: auto;
+    min-width: 100px;
+
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    height: 48px;
+    min-height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+    padding: 0 5px;
+    font-size: 1.2rem;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    font-size: 1rem;
+  }
+
+  .card-content {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
+
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 1rem;
+
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 25px 0;
+  }
+
+  .footer-links,
+  .footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links {
+    align-items: flex-start;
+  }
+
+  .footer-socials {
+    align-items: flex-end;
   }
 
 
@@ -760,7 +866,7 @@ footer p {
     }
 
     70% {
-      transform: translateY(-140px);
+      transform: translateY(-150px);
     }
 
     75% {
