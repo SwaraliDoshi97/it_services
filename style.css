@@ -167,7 +167,8 @@ body {
   margin-bottom: 0.625rem;
   font-size: clamp(1.5rem, 3vw, 4em);
   line-height: 1.5;
-  display: inline-flex;
+
+  display: flex;
   align-items: center;
   white-space: nowrap;
   gap: 8px;
@@ -247,7 +248,7 @@ body {
   display: flex;
   align-items: center;
   color: #38bdf8;
-  margin-right: 5rem;
+  /* margin-right: rem; */
 }
 
 /* ANIMATION */
@@ -733,15 +734,15 @@ footer p {
     justify-content: center;
 
     white-space: normal;
-    /* padding-bottom: 20px; */
+    padding-bottom: 20px;
     margin-top: 20px;
-    /* gap: 10px; */
+    gap: 10px;
     height: auto;
+    font-weight: 600;
   }
 
   .mainline {
-    font-size: clamp(1.3rem, 5vw, 2.4rem);
-    /* font-size: clamp(2.5rem, 6vw, 3rem); */
+    font-size: clamp(2.5rem, 6vw, 3rem);
     white-space: normal;
     height: auto;
     text-align: center;
@@ -749,28 +750,24 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    gap: 4px;
-    margin-left: 0;
-  }
 
-  .box {
-    padding: 0 8px;
-    font-size: 2.5rem;
+    gap: 4px;
+    margin-bottom: 8px;
   }
 
   .line1,
   .line2,
   .line3 {
     display: block;
-    font-size: 3rem;
+    font-size: 2.8rem;
     line-height: 1.2;
+    margin: 0;
   }
 
   .underline {
     display: block;
     text-align: center;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     gap: 1px;
     height: auto;
     font-size: 2rem
@@ -784,15 +781,18 @@ footer p {
     overflow: hidden;
 
     margin-left: 0.02rem;
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     width: auto;
-    height: 2.5rem;
+    height: 3rem;
+    margin-top: 0;
+    font-weight: 600;
   }
 
   .active {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 
     align-items: center;
     animation: slide 10s infinite ease-in-out;
@@ -800,24 +800,28 @@ footer p {
   }
 
   .active span {
-    display: inline-block;
+    display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    height: 2.23rem;
+    height: 3rem;
 
     line-height: 2.2rem;
     font-size: inherit;
   }
 
+  .box {
+    padding: 0 8px;
+    font-size: 2.5rem;
+  }
+
+
+
+
   .section-title {
     font-size: 2.2rem;
 
   }
-
-  /* .section-subtitle {
-    font-size: 1rem;
-  } */
 
   .hero-text {
     font-size: 1.2rem;
@@ -906,35 +910,7 @@ footer p {
     align-items: flex-end;
   }
 
-
   /* @keyframes slide {
-
-    0%,
-    20% {
-      transform: translateY(0);
-    }
-
-    25%,
-    45% {
-      transform: translateY(-25%);
-    }
-
-    50%,
-    70% {
-      transform: translateY(-50%);
-    }
-
-    75%,
-    95% {
-      transform: translateY(-75%);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
-
-  } */
-  @keyframes slide {
     0% {
       transform: translateY(0);
     }
@@ -956,7 +932,7 @@ footer p {
     }
 
     70% {
-      transform: translateY(-150px);
+      transform: translateY(-140px);
     }
 
     75% {
@@ -970,9 +946,34 @@ footer p {
     100% {
       transform: translateY(0);
     }
+  } */
+  @keyframes slide {
+
+    0%,
+    20% {
+      transform: translateY(0);
+    }
+
+    25%,
+    45% {
+      transform: translateY(-3rem);
+    }
+
+    50%,
+    70% {
+      transform: translateY(-6rem);
+    }
+
+    75%,
+    95% {
+      transform: translateY(-9rem);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 }
-
 
 /* @media(max-width:500px){
 
