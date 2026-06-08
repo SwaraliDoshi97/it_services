@@ -775,8 +775,8 @@ footer p {
   }
 
   .mainline {
-    font-size: clamp(2.5rem, 6vw, 3rem);
-    white-space: normal;
+    font-size: clamp(2.5rem, 5vw, 2rem);
+    white-space: nowrap;
     height: auto;
     text-align: center;
 
@@ -792,7 +792,7 @@ footer p {
   .line2,
   .line3 {
     display: block;
-    font-size: 2.8rem;
+    font-size: 2rem;
     line-height: 1.2;
     margin: 0;
   }
@@ -814,11 +814,11 @@ footer p {
     overflow: hidden;
 
     margin-left: 0.02rem;
-    font-size: 2.8rem;
+    font-size: 2rem;
     width: auto;
     height: 3rem;
     margin-top: 0;
-    font-weight: 600;
+
   }
 
   .active-text {
@@ -845,7 +845,7 @@ footer p {
 
   .box {
     padding: 0 8px;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
 
