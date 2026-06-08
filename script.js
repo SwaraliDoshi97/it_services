@@ -61,14 +61,25 @@ cards.forEach(card => {
 
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+const overlay = document.querySelector('.overlay');
 
-hamburger.addEventListener('click', () => {
+console.log("overlay:", overlay);
+// hamburger.addEventListener('click', () => {
+//     navLinks.classList.toggle('active');
+// });
+hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
+    // overlay.classList.toggle('active');
 });
 
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove("active");
+        hamburger.classList.remove('active');
+        // overlay.classList.remove('active');
     });
 });
 
@@ -78,5 +89,14 @@ document.addEventListener('click', (e) => {
         !hamburger.contains(e.target)
     ) {
         navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        overlay.classList.remove('active');
+
     }
+});
+
+overlay.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    hamburger.classList.remove('active');
+    overlay.classList.remove('active');
 });
