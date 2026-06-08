@@ -39,7 +39,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.navbar .scrolled {
+.navbar.scrolled {
   background: rgb(255, 255, 255, 0.95);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12px);
@@ -67,6 +67,43 @@ body {
 
 .nav-links a:hover {
   color: #2563eb;
+}
+
+.hamburger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  position: relative;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.hamburger span {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  border-radius: 50px;
+  background: #fff;
+}
+
+.hamburger span:nth-child(1) {
+  /* transform: translateY(-6px); */
+  width: 12px;
+}
+
+.hamburger span:nth-child(2) {
+  /* transform: translateY(0); */
+  width: 16px;
+}
+
+.hamburger span:nth-child(3) {
+  /* transform: translateY(6px); */
+  width: 8px;
 }
 
 .nav-btn {
@@ -119,6 +156,11 @@ body {
   font-weight: 500;
   line-height: 1.1;
   margin-bottom: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .mainline {
@@ -127,6 +169,7 @@ body {
   line-height: 1.5;
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
   gap: 8px;
   margin-left: 8px;
   position: relative;
@@ -134,7 +177,13 @@ body {
   width: max-content;
 }
 
-.mainline::after {
+.line1,
+.line2,
+.line3 {
+  display: inline-block;
+}
+
+/* .mainline::after {
   content: "";
   font-size: clamp(1.5rem, 3vw, 4em);
   position: absolute;
@@ -144,7 +193,7 @@ body {
   height: 1px;
   background: linear-gradient(to right, #38bdf8, #2563eb);
   border-radius: 20px;
-}
+} */
 
 .highlight {
   color: #38bdf8;
@@ -152,19 +201,20 @@ body {
 
 .box {
   background: linear-gradient(135deg, #38bdf8, #2563eb);
-  padding: 0 5px;
-  border-radius: 10px;
-  line-height: 1.5;
+  padding: 1px 0.5rem;
+  border-radius: 12px;
+  line-height: 1.2;
   margin-right: 5px;
+  display: inline-block;
 
 }
 
-/* .underline {
-  position: relative;
-  display: inline-block;
-  line-height: 1.2;
-  padding-bottom: 6px;
-} */
+.underline {
+  margin-top: 10px;
+  display: inline;
+  line-height: 1.5;
+  padding: 15px;
+}
 
 /* .underline::after {
   content: "";
@@ -180,7 +230,7 @@ body {
 
 /* SLIDING TEXT */
 .window {
-  height: 90px;
+  height: 95px;
   overflow: hidden;
   display: inline-block;
   vertical-align: middle;
@@ -197,6 +247,7 @@ body {
   display: flex;
   align-items: center;
   color: #38bdf8;
+  margin-right: 5rem;
 }
 
 /* ANIMATION */
@@ -544,6 +595,7 @@ section {
 
 .project-card:hover {
   /* transform: translateY(-10px); */
+  transform: scale(1.03);
   border-color: #38bdf8;
 }
 
@@ -594,6 +646,11 @@ section {
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
+}
+
+input :focus,
+textarea :focus {
+  transform: scale(1.01);
 }
 
 /* .contact-form button:hover{
@@ -662,85 +719,95 @@ footer p {
 
 @media(max-width:768px) {
 
-  .navbar {
-    padding: 12px 5%;
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-  }
-
   .hero {
     padding: 120px 5%;
-    margin-top: 6rem;
-    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    margin-top: 3rem;
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
 
   }
 
   .head {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    white-space: nowrap;
-    padding-bottom: 20px;
-    margin-top: 20px;
-    gap: 1px;
-    height: 2.5rem;
-  }
-
-  .underline {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    white-space: nowrap;
-    /* gap: 1px; */
-    height: 2.5rem;
-    font-size: 1.2rem
+    justify-content: center;
+
+    white-space: normal;
+    /* padding-bottom: 20px; */
+    margin-top: 20px;
+    /* gap: 10px; */
+    height: auto;
   }
 
   .mainline {
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
-    white-space: nowrap;
-    height: 2.5rem;
+    font-size: clamp(1.3rem, 5vw, 2.4rem);
+    /* font-size: clamp(2.5rem, 6vw, 3rem); */
+    white-space: normal;
+    height: auto;
+    text-align: center;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
+    margin-left: 0;
+  }
+
+  .box {
+    padding: 0 8px;
+    font-size: 2.5rem;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    display: block;
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .underline {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    gap: 1px;
+    height: auto;
+    font-size: 2rem
   }
 
   .window {
     display: block;
     justify-content: center;
+    align-items: center;
     text-align: center;
     overflow: hidden;
-    height: 2.5rem;
+
     margin-left: 0.02rem;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     width: auto;
-    overflow: hidden;
+    height: 2.5rem;
   }
 
   .active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+
     align-items: center;
     animation: slide 10s infinite ease-in-out;
+
   }
 
-
   .active span {
-    /* height: 70px; */
+    display: inline-block;
+    align-items: center;
+    text-align: center;
     justify-content: center;
-    display: flex;
     height: 2.23rem;
-    line-height: 1.7rem;
+
+    line-height: 2.2rem;
+    font-size: inherit;
   }
 
   .section-title {
@@ -782,10 +849,7 @@ footer p {
     align-items: center;
   }
 
-  .box {
-    padding: 0 5px;
-    font-size: 1.2rem;
-  }
+
 
   .about-cards {
     grid-template-columns: 1fr;
@@ -843,8 +907,34 @@ footer p {
   }
 
 
-  @keyframes slide {
+  /* @keyframes slide {
 
+    0%,
+    20% {
+      transform: translateY(0);
+    }
+
+    25%,
+    45% {
+      transform: translateY(-25%);
+    }
+
+    50%,
+    70% {
+      transform: translateY(-50%);
+    }
+
+    75%,
+    95% {
+      transform: translateY(-75%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+
+  } */
+  @keyframes slide {
     0% {
       transform: translateY(0);
     }
@@ -880,10 +970,9 @@ footer p {
     100% {
       transform: translateY(0);
     }
-
   }
-
 }
+
 
 /* @media(max-width:500px){
 
