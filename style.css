@@ -670,17 +670,9 @@ footer p {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
+.mobile-consultation {
+  display: none;
+}
 
 
 
@@ -700,7 +692,7 @@ footer p {
 
   .nav-links {
     position: fixed;
-    top: 80%;
+    top: 85%;
     left: 50px;
 
     width: 20rem;
@@ -714,7 +706,7 @@ footer p {
 
     opacity: 0;
     visibility: hidden;
-
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
@@ -724,6 +716,23 @@ footer p {
 
   .nav-btn {
     display: none;
+  }
+
+  .mobile-consultation {
+    margin-top: 20px;
+    /* list-style: none; */
+    display: block;
+  }
+
+  .menu-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    border-radius: 40px;
+    color: white !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+
   }
 
   .navbar {
