@@ -73,6 +73,7 @@ hamburger.addEventListener('click', (e) => {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
     // overlay.classList.toggle('active');
+    console.log(navLinks.classList);
 });
 
 document.querySelectorAll(".nav-links a").forEach(link => {
@@ -100,3 +101,4 @@ document.addEventListener('click', (e) => {
 //     hamburger.classList.remove('active');
 //     overlay.classList.remove('active');
 // });
+

@@ -733,31 +733,28 @@ footer p {
     border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 24px;
 
-    /* transform: translateX(-30px); */
-
     opacity: 0;
     visibility: hidden;
 
-    transform: translateX(-50%) translateY(-120px);
+    transform: translateX(-50%) translateY(-40px) scale(0.98);
     transition:
-      transform 0.5s,
-      opacity 0.5s ease;
-    /* visibility 0.35s ease; */
+      transform 0.15s ease,
+      opacity 0.15s ease;
   }
 
   .nav-links.active {
     opacity: 1;
     visibility: visible;
 
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0) scale(1);
   }
 
   .nav-links a {
     color: #ffffff;
     font-weight: 500;
     text-decoration: none;
-
   }
+
 
   .nav-btn {
     display: none;
