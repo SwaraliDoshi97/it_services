@@ -90,13 +90,13 @@ document.addEventListener('click', (e) => {
     ) {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
-        overlay.classList.remove('active');
+        // overlay.classList.remove('active');
 
     }
 });
 
-overlay.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    hamburger.classList.remove('active');
-    overlay.classList.remove('active');
-});
+// overlay.addEventListener('click', () => {
+//     navLinks.classList.remove('active');
+//     hamburger.classList.remove('active');
+//     overlay.classList.remove('active');
+// });
