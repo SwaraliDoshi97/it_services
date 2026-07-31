@@ -320,10 +320,6 @@ section {
 } */
 
 
-#services {
-  background: #eef4ff;
-  scroll-margin-top: 8rem;
-}
 
 #projects {
   background: white;
@@ -504,6 +500,12 @@ section {
   line-height: 1.7;
   margin-bottom: 1.5rem;
 
+}
+
+#services {
+  background: #eef4ff;
+  scroll-margin-top: 2rem;
+  /* padding: 12px; */
 }
 
 .service-list {
