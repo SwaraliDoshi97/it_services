@@ -326,6 +326,7 @@ section {
   scroll-margin-top: 8rem;
   padding: 6rem 8%;
   font-family: 'Inter', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   /* max-width: 1300px; */
 }
 
@@ -583,6 +584,7 @@ section {
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: 600;
+
 }
 
 #contact .section-subtitle {
@@ -591,7 +593,7 @@ section {
   margin: auto;
   color: #474a4f;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
 
 }
@@ -605,6 +607,7 @@ section {
   outline: none;
   font-size: 1rem;
   border: 1px solid #dbe4f0;
+  font-family: 'Inter', sans-serif;
 }
 
 .contact-form textarea {
