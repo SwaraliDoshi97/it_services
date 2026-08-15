@@ -944,9 +944,6 @@ footer p {
     font-size: 2rem;
   }
 
-
-
-
   .section-title {
     font-size: 2.2rem;
 
@@ -1066,6 +1063,8 @@ footer p {
     }
   }
 }
+
+
 
 @media (min-width: 1300px)  {
 
